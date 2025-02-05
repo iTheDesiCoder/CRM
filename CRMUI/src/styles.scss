@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+// Import Bootstrap functions and variables before overriding
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+// Override primary Bootstrap colors
+$primary: #083b87;       // Custom primary blue
+$secondary: #6c757d;     // Custom secondary gray
+$success: #198754;       // Custom success green
+$info: #0dcaf0;          // Custom info cyan
+$warning: #ffc107;       // Custom warning yellow
+$danger: #dc3545;        // Custom danger red
+$light: #f8f9fa;         // Custom light gray
+$dark: #343a40;          // Custom dark gray
+
+// Manually compute the `$theme-colors-rgb`
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+
+
+// Typography overrides (optional)
+$body-font-family: 'Arial, sans-serif';
+$body-font-size: 1rem;
+$headings-font-family: 'Arial, sans-serif';
+
+
+
+// Import Bootstrap mixins (which depend on variables)
+@import "bootstrap/scss/mixins";
+// Import core Bootstrap styles after overrides
+@import "bootstrap/scss/bootstrap";
+
+/* Custom ngx-datatable styles */
+ngx-datatable.bootstrap {
+  .datatable-header {
+    background-color: $primary;
+    color: $light;
+    font-weight: bold;
+    font-family: $headings-font-family;
+    padding: 10px;
+    border-bottom: 2px solid $secondary;
+  }
+
+  .datatable-row-center {
+    padding: 10px;
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+  }
+
+  .datatable-body-row {
+    background-color: $light;
+    border-bottom: 1px solid $dark;
+    &:hover {
+      background-color: lighten($primary, 40%);
+    }
+  }
+
+  .datatable-footer {
+    background-color: lighten($secondary, 30%);
+    color: $dark;
+    padding: 10px;
+    border-top: 2px solid $secondary;
+  }
+
+  .datatable-body-cell {
+    padding: 10px;
+  }
+
+  .pagination {
+    background-color: $light;
+    border-top: 2px solid $secondary;
+    padding: 10px;
+  }
+
+  .page-item.active .page-link {
+    background-color: $primary;
+    border-color: $primary;
+    color: $light;
+  }
+}
+
+/* Utility to fix table responsiveness */
+.table-responsive {
+  overflow-x: auto;
+}

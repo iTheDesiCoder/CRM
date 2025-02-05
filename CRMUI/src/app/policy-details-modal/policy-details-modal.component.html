@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h4 class="modal-title">Policy Details</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+  </div>
+  
+  <div class="modal-body">
+    <p><strong>Policy Number:</strong> {{ policy.policyNumber }}</p>
+    <p><strong>Description:</strong> {{ policy.description }}</p>
+    <p><strong>Account Number:</strong> {{ policy.accountNumber }}</p>
+    <p><strong>Assigned To:</strong> {{ policy.assignedTo }}</p>
+    <p><strong>Publish Date:</strong> {{ policy.publishDate | date: 'longDate' }}</p>
+  </div>
+  
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+  </div>
+  

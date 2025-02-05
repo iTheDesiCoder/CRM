@@ -1,0 +1,202 @@
+[
+  {
+    "subject": "Portfolio Rebalancing",
+    "description": "Gather client feedback on their service experience.",
+    "publishDate": "2025-02-10",
+    "accountNumber": "535-455778-500",
+    "clientName": "Jessica Taylor",
+    "policyNumber": "POLICY935630005",
+    "status": "Completed",
+    "priority": "Medium"
+  },
+  {
+    "subject": "Customer Satisfaction Survey",
+    "description": "Gather client feedback on their service experience.",
+    "publishDate": "2025-02-20",
+    "accountNumber": "783-176403-589",
+    "clientName": "Anna Martinez",
+    "policyNumber": "POLICY317971190",
+    "status": "New",
+    "priority": "High"
+  },
+  {
+    "subject": "Client Onboarding Follow-up",
+    "description": "The policy premium for the client is due.",
+    "publishDate": "2025-02-21",
+    "accountNumber": "452-895782-671",
+    "clientName": "James Thomas",
+    "policyNumber": "POLICY941742650",
+    "status": "In-Progress",
+    "priority": "Medium"
+  },
+  {
+    "subject": "Follow-up on Existing Policy",
+    "description": "Suggest a new annuity product to the client.",
+    "publishDate": "2025-02-20",
+    "accountNumber": "595-690562-261",
+    "clientName": "Emily Davis",
+    "policyNumber": "POLICY442621072",
+    "status": "In-Progress",
+    "priority": "Medium"
+  },
+  {
+    "subject": "Better Product Suggestion",
+    "description": "Gather client feedback on their service experience.",
+    "publishDate": "2025-02-07",
+    "accountNumber": "850-229600-930",
+    "clientName": "Michael Smith",
+    "policyNumber": "POLICY441609608",
+    "status": "New",
+    "priority": "Medium"
+  },
+  {
+    "subject": "Premium Due Reminder",
+    "description": "Gather client feedback on their service experience.",
+    "publishDate": "2025-01-12",
+    "accountNumber": "229-687773-545",
+    "clientName": "Chris Lee",
+    "policyNumber": "POLICY862125964",
+    "status": "Completed",
+    "priority": "Medium"
+  },
+  {
+    "subject": "Premium Due Reminder",
+    "description": "Conduct an annual review of the client's investment portfolio.",
+    "publishDate": "2025-01-28",
+    "accountNumber": "682-250481-463",
+    "clientName": "David Wilson",
+    "policyNumber": "POLICY740302057",
+    "status": "In-Progress",
+    "priority": "High"
+  },
+  {
+    "subject": "Policy Beneficiary Update",
+    "description": "The policy premium for the client is due.",
+    "publishDate": "2025-02-04",
+    "accountNumber": "684-449542-967",
+    "clientName": "Daniel Anderson",
+    "policyNumber": "POLICY769673471",
+    "status": "In-Progress",
+    "priority": "Low"
+  },
+  {
+    "subject": "Customer Satisfaction Survey",
+    "description": "Suggest a new annuity product to the client.",
+    "publishDate": "2025-01-21",
+    "accountNumber": "475-833480-960",
+    "clientName": "Daniel Anderson",
+    "policyNumber": "POLICY909644826",
+    "status": "Completed",
+    "priority": "High"
+  },
+  {
+    "subject": "Client Onboarding Follow-up",
+    "description": "Update the policy beneficiary information.",
+    "publishDate": "2025-02-16",
+    "accountNumber": "330-177849-135",
+    "clientName": "Michael Smith",
+    "policyNumber": "POLICY184711075",
+    "status": "New",
+    "priority": "Low"
+  },
+  {
+    "subject": "Annual Review",
+    "description": "Remind the client to submit necessary documents.",
+    "publishDate": "2025-01-22",
+    "accountNumber": "858-451623-589",
+    "clientName": "Sarah Johnson",
+    "policyNumber": "POLICY641519231",
+    "status": "Completed",
+    "priority": "Low"
+  },
+  {
+    "subject": "Document Submission Reminder",
+    "description": "Conduct an annual review of the client's investment portfolio.",
+    "publishDate": "2025-02-22",
+    "accountNumber": "754-181973-377",
+    "clientName": "Anna Martinez",
+    "policyNumber": "POLICY270848002",
+    "status": "In-Progress",
+    "priority": "Low"
+  },
+  {
+    "subject": "Customer Satisfaction Survey",
+    "description": "Follow up with the client after initial onboarding.",
+    "publishDate": "2025-02-06",
+    "accountNumber": "192-443951-902",
+    "clientName": "Emily Davis",
+    "policyNumber": "POLICY597019585",
+    "status": "New",
+    "priority": "High"
+  },
+  {
+    "subject": "Better Product Suggestion",
+    "description": "Review and adjust the client's portfolio allocations.",
+    "publishDate": "2025-01-13",
+    "accountNumber": "626-648163-578",
+    "clientName": "Anna Martinez",
+    "policyNumber": "POLICY167438185",
+    "status": "In-Progress",
+    "priority": "Low"
+  },
+  {
+    "subject": "Follow-up on Existing Policy",
+    "description": "Follow up with the client after initial onboarding.",
+    "publishDate": "2025-02-02",
+    "accountNumber": "786-946126-337",
+    "clientName": "James Thomas",
+    "policyNumber": "POLICY631086604",
+    "status": "New",
+    "priority": "High"
+  },
+  {
+    "subject": "Policy Lapse Warning",
+    "description": "Review and adjust the client's portfolio allocations.",
+    "publishDate": "2025-01-19",
+    "accountNumber": "183-117086-331",
+    "clientName": "Jessica Taylor",
+    "policyNumber": "POLICY582036897",
+    "status": "Completed",
+    "priority": "Medium"
+  },
+  {
+    "subject": "Customer Satisfaction Survey",
+    "description": "Follow up with the client after initial onboarding.",
+    "publishDate": "2025-02-24",
+    "accountNumber": "822-531344-277",
+    "clientName": "Emily Davis",
+    "policyNumber": "POLICY235395027",
+    "status": "Completed",
+    "priority": "Medium"
+  },
+  {
+    "subject": "Document Submission Reminder",
+    "description": "Follow up with the client after initial onboarding.",
+    "publishDate": "2025-01-28",
+    "accountNumber": "827-413810-937",
+    "clientName": "Daniel Anderson",
+    "policyNumber": "POLICY995963224",
+    "status": "Completed",
+    "priority": "Low"
+  },
+  {
+    "subject": "Client Onboarding Follow-up",
+    "description": "Follow up with the client after initial onboarding.",
+    "publishDate": "2025-02-26",
+    "accountNumber": "812-489399-654",
+    "clientName": "Sarah Johnson",
+    "policyNumber": "POLICY892960631",
+    "status": "New",
+    "priority": "Low"
+  },
+  {
+    "subject": "Customer Satisfaction Survey",
+    "description": "Conduct an annual review of the client's investment portfolio.",
+    "publishDate": "2025-01-22",
+    "accountNumber": "586-826210-264",
+    "clientName": "Chris Lee",
+    "policyNumber": "POLICY632355351",
+    "status": "New",
+    "priority": "High"
+  }
+]

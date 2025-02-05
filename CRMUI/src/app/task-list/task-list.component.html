@@ -1,0 +1,103 @@
+<div class="container mt-4">
+  <h2 class="mb-3">My Tasks</h2>
+
+  <!-- Search Panel -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <strong>Search Filters</strong>
+    </div>
+    <div class="card-body">
+      <div class="row gy-3">
+        <!-- Date Range Filter -->
+        <div class="col-md-4">
+          <label for="startDate" class="form-label">Start Date</label>
+          <input type="date" id="startDate" class="form-control" [(ngModel)]="startDate" (change)="applyFilters()">
+        </div>
+        <div class="col-md-4">
+          <label for="endDate" class="form-label">End Date</label>
+          <input type="date" id="endDate" class="form-control" [(ngModel)]="endDate" (change)="applyFilters()">
+        </div>
+
+        <!-- Status Filter -->
+        <div class="col-md-4">
+          <label for="statusFilter" class="form-label">Status</label>
+          <select id="statusFilter" class="form-select" [(ngModel)]="selectedStatus" (change)="applyFilters()">
+            <option value="">All</option>
+            <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+          </select>
+        </div>
+
+        <!-- Account Number Filter -->
+        <div class="col-md-6">
+          <label for="accountFilter" class="form-label">Account Number</label>
+          <input
+            type="text"
+            id="accountFilter"
+            class="form-control"
+            placeholder="Search by Account Number"
+            [(ngModel)]="accountFilter"
+            (input)="applyFilters()"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Task List Table -->
+  <ngx-datatable
+    class="bootstrap"
+    [rows]="currentPageTasks"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [limit]="10"
+    [columnMode]="'force'"
+  >
+    <!-- Columns remain the same as before -->
+    <ngx-datatable-column name="Publish Date">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        {{ row.publishDate | date: 'longDate' }}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Account Number">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        {{ row.accountNumber }}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Client Name">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        {{ row.clientName }}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Policy Number">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <a href="#" (click)="openPolicyDetailsModal(row); $event.preventDefault()">
+          {{ row.policyNumber }}
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Subject">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <a href="#" (click)="openTaskDetailsModal(row); $event.preventDefault()">
+          {{ row.subject }}
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Priority">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <span [ngClass]="getPriorityClass(row.priority)">{{ row.priority }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Status">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <span [ngClass]="getStatusClass(row.status)">{{ row.status }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>

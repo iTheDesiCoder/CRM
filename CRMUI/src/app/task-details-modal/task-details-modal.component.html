@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h4 class="modal-title">Task Details</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+  </div>
+  
+  <div class="modal-body">
+    <p><strong>Subject:</strong> {{ task.subject }}</p>
+    <p><strong>Description:</strong> {{ task.description }}</p>
+    <p><strong>Assigned To:</strong> {{ task.assignedTo }}</p>
+    <p><strong>Publish Date:</strong> {{ task.publishDate | date: 'longDate' }}</p>
+    <p><strong>Account Number:</strong> {{ task.accountNumber }}</p>
+    <p><strong>Policy Number:</strong> {{ task.policyNumber }}</p>
+  
+    <hr />
+    <h5>Add Note / View Audit Trail</h5>
+    <textarea class="form-control mb-2" [(ngModel)]="newNote" placeholder="Add a note..."></textarea>
+    <button class="btn btn-primary" (click)="addNote()">Add Note</button>
+  
+    <h6 class="mt-3">Audit Trail</h6>
+    <ul>
+      <li *ngFor="let note of taskNotes">{{ note }}</li>
+    </ul>
+  </div>
+  
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+  </div>
+  

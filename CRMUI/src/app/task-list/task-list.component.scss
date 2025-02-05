@@ -1,0 +1,21 @@
+// ✅ Only import shared styles if needed
+@import "../../styles/_variables";  // Custom variables if you created them
+.card {
+    border-radius: 0.5rem;
+  }
+  
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .form-label {
+    font-weight: 500;
+  }
+  
+  .row .col-md-4,
+  .row .col-md-6 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
