@@ -1,0 +1,26 @@
+# Python virtual environments
+.venv/
+.env/
+env/
+__pycache__/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and temporary files
+*.log
+*.sqlite3
+
+# IDE-specific settings (optional)
+.vscode/
+.idea/
+.DS_Store
+
+# Environment variables
+.env
+.venv
+
+# Cached data
+.cache/

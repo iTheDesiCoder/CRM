@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "subject": "Premium Due Reminder",
+        "description": "The policy premium for the client is due.",
+        "publishDate": "2025-01-31",
+        "accountNumber": "123-456789-001",
+        "clientName": "Michael Smith",
+        "policyNumber": "POLICY123456789",
+        "status": "New",
+        "priority": "High"
+    },
+    {
+        "id": 2,
+        "subject": "Better Product Suggestion",
+        "description": "Suggest a new annuity product to the client.",
+        "publishDate": "2025-02-01",
+        "accountNumber": "987-654321-002",
+        "clientName": "Sarah Johnson",
+        "policyNumber": "ANNUITY987654321",
+        "status": "In-Progress",
+        "priority": "Medium"
+    }
+]
