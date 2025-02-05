@@ -43,6 +43,7 @@ export class TaskListComponent implements OnInit {
       (data) => {
         this.tasks = data;  // Assign fetched data to tasks array
         console.log("We got data",this.tasks);
+        this.filteredTasks = [...this.tasks];
         this.setPageData(1);  // Initialize pagination
       },
       (error) => {
@@ -51,12 +52,8 @@ export class TaskListComponent implements OnInit {
     );
   }
 
-  // Pagination logic (as before)
-  setPageData(pageNumber: number): void {
-    const pageSize = 10;
-    const startIndex = (pageNumber - 1) * pageSize;
-    this.currentPageTasks = this.tasks.slice(startIndex, startIndex + pageSize);
-  }
+
+
   applyFilters() {
     this.filteredTasks = this.tasks.filter(task => {
       // Filter by date range
@@ -75,8 +72,16 @@ export class TaskListComponent implements OnInit {
 
       return true;  // Include task if all conditions pass
     });
+
+    this.setPageData(1);
   }
 
+  // Pagination logic (as before)
+  setPageData(pageNumber: number): void {
+    const pageSize = 10;
+    const startIndex = (pageNumber - 1) * pageSize;
+    this.currentPageTasks = this.filteredTasks.slice(startIndex, startIndex + pageSize);
+  }
   openTaskDetailsModal(task: any) {
     const initialState = { task };
     this.modalService.show(TaskDetailsModalComponent, { initialState });
