@@ -64,7 +64,7 @@ class TaskService:
         # Construct subject and description
         subject = f" Policy {policy_number}: {message_description}"
         description = (
-            f"Alert received from Vendor:\n"
+            f"Alert received:\n"
             f"- Message: {message['MessageDescription']}\n"
             f"- Plan Name: {plan_name}\n"
             f"- Carrier Name: {carrier_name}\n"

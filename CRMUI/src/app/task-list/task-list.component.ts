@@ -45,9 +45,11 @@ export class TaskListComponent implements OnInit {
 
     this.taskService.getTasks().subscribe(
       (data) => {
-        this.tasks = data;  // Assign fetched data to tasks array
+        // Sort tasks by publish_date in descending order (most recent first)
+        this.tasks = data.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
         console.log("We got data",this.tasks);
         this.filteredTasks = [...this.tasks];
+        
         this.setPageData(1);  // Initialize pagination
       },
       (error) => {
