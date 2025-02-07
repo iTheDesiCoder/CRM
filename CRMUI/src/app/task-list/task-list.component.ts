@@ -30,6 +30,10 @@ export class TaskListComponent implements OnInit {
 
   ngOnInit() {
     this.fetchTasks();
+    // Subscribe to task list update notifications
+    this.taskService.onTaskListUpdated().subscribe(() => {
+      this.fetchTasks();  // Refresh the tasks when notified
+    })
   }
 
   fetchTasks() {

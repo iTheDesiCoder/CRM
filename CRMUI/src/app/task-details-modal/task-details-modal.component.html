@@ -5,14 +5,24 @@
   
   <div class="modal-body">
     <p><strong>Subject:</strong> {{ task.subject }}</p>
-    <p><strong>Description:</strong> {{ task.description }}</p>
-    <p><strong>Assigned To:</strong> {{ task.assignedTo }}</p>
+    
     <p><strong>Publish Date:</strong> {{ task.publishDate | date: 'longDate' }}</p>
     <p><strong>Account Number:</strong> {{ task.accountNumber }}</p>
-    <p><strong>Policy Number:</strong> {{ task.policyNumber }}</p>
-  
+    <p><strong>Priority:</strong> {{ task.priority }}</p>
+    
+    <!-- Status Dropdown -->
+    <label for="status" class="form-label"><strong>Status:</strong></label>
+    <select id="status" [(ngModel)]="editableTask.status" class="form-select">
+      <option *ngFor="let statusOption of statusOptions" [value]="statusOption">
+        {{ statusOption }}
+      </option>
+    </select>
+
+    <p><strong>Description:</strong></p>
+    <p [innerHTML]="getFormattedDescription()"></p>
+
     <hr />
-    <h5>Add Note / View Audit Trail</h5>
+    <h5>Add Note</h5>
     <textarea class="form-control mb-2" [(ngModel)]="newNote" placeholder="Add a note..."></textarea>
     <button class="btn btn-primary" (click)="addNote()">Add Note</button>
   
@@ -23,6 +33,7 @@
   </div>
   
   <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="saveTask()">Save</button>
     <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
   </div>
   

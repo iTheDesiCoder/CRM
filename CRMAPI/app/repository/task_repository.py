@@ -35,3 +35,7 @@ class TaskRepository:
         tasks.append(new_task)
         await cache.set(CACHE_KEY, tasks)
         return new_task
+
+    async def update_cache(self, tasks: list[Task]) -> None:
+        """Update the cache with the new task list."""
+        await cache.set(CACHE_KEY, tasks)
